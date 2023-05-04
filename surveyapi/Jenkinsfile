@@ -10,9 +10,9 @@ pipeline{
                 checkout scm
                 sh 'ls -al'
                 sh 'pwd'
-                sh("sudo -S docker build --tag mpremashish1/surveyapi:${BUILD_TIMESTAMP} .")
-                sh("echo ${BUILD_TIMESTAMP}")
-                sh('sudo docker login -u mpremashish1 -p \"${DOCKERHUB_PASS}\"')
+                sh("cd surveyapi && sudo -S docker build --tag mpremashish1/surveyapi:${BUILD_TIMESTAMP} .")
+                sh("cd surveyapi && echo ${BUILD_TIMESTAMP}")
+                sh('cd surveyapi && sudo docker login -u mpremashish1 -p \"${DOCKERHUB_PASS}\"')
             }
         }
         stage("Push docker image"){
