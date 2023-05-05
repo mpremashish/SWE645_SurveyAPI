@@ -7,8 +7,7 @@ We have 2 main endpoints :
             "lastname","streetAddress": "213dsada","city" : "Fairfax","state" :"VA", "zip" : "22032", 
             "telephone_num" : "21379819831","email" : "sk@gmu.edu","date" : "11/07/90","mostLiked" : "campus",
             "interest" : "friends", "recommendation" : "Likely"}' ```
-2. 
-3. Get (\getStudents):
+2. Get (\getStudents):
     ```curl --location --request GET 'http://34.196.44.223:32484/getStudents' \ --data-raw ''```
 
 To run the project :
